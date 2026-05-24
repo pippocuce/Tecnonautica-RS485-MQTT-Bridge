@@ -1,7 +1,7 @@
 # Configurazione Add-on Home Assistant per Bus Tecnonautica RS-485
 name: "Tecnonautica RS485 MQTT Bridge"
 description: "Integrazione dei pannelli Tecnonautica (TN222, TN218, TN267, TN234) in Home Assistant tramite RS-485 e MQTT"
-version: "1.1.0"
+version: "1.1.1"
 slug: "tecnonautica_rs485_bridge"
 init: false
 apparmor: true
