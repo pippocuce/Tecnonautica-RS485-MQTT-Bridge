@@ -1,0 +1,35 @@
+# Configurazione Add-on Home Assistant per Bus Tecnonautica RS-485
+name: "Tecnonautica RS485 MQTT Bridge"
+description: "Integrazione dei pannelli Tecnonautica (TN222, TN218, TN267, TN234) in Home Assistant tramite RS-485 e MQTT"
+version: "1.1.0"
+slug: "tecnonautica_rs485_bridge"
+init: false
+apparmor: true
+full_access: true
+startup: "application"
+boot: "auto"
+serial: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  usb_port: "/dev/ttyUSB0"
+  baud_rate: 19200
+  scan_interval: 5
+  mqtt_host: "core-mosquitto"
+  mqtt_port: 1883
+  mqtt_username: ""
+  mqtt_password: ""
+  mqtt_base_topic: "tecnonautica"
+schema:
+  usb_port: str
+  baud_rate: int
+  scan_interval: int
+  mqtt_host: str
+  mqtt_port: int
+  mqtt_username: str?
+  mqtt_password: str?
+  mqtt_base_topic: str
